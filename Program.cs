@@ -7,6 +7,7 @@ using System.Xml;
 
 namespace Knapsack_Sorter
 {
+    //Use value to weight ratio to calculate most valuable content
     public class Knapsack
     {
         public int Size;
@@ -17,7 +18,7 @@ namespace Knapsack_Sorter
         public string Name;
         public int Value;
         public int Weight;
-        public double Ratio ;
+        public double Ratio;
     }
     
     class Program
