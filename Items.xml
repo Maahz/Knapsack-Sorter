@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Items>
+  <Item ID="1">
+    <Name>Axe</Name>
+    <Value>10</Value>
+    <Weight>5</Weight>
+    <Ratio>2</Ratio>
+  </Item>
+  <Item ID="2">
+    <Name>Shotgun</Name>
+    <Value>200</Value>
+    <Weight>5</Weight>
+    <Ratio>40</Ratio>
+  </Item>
+</Items>
