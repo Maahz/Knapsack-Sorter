@@ -48,7 +48,7 @@ namespace Knapsack_Sorter
             //Create itempool and add items
             #region "ItemPool"
             List<Item> itemPool = new List<Item>();
-            itemPool.Add(new Item("Bone", 1, 1));
+            itemPool.Add(new Item("Bone", 3, 1));
             itemPool.Add(new Item("Axe", 50, 3));
             itemPool.Add(new Item("Shotgun", 1231, 5));
             itemPool.Add(new Item("Bike", 200, 10));
@@ -79,6 +79,12 @@ namespace Knapsack_Sorter
             itemPool.Add(new Item("Holster", 113, 2));
             #endregion            
 
+            //Function to calculate space used
+
+            //Function to sort the list
+
+            ListSort(itemPool);
+
             foreach (Item item in itemPool)
             {
                 Console.WriteLine(item.Name +" : " + item.Ratio);
@@ -90,5 +96,7 @@ namespace Knapsack_Sorter
             }
             Console.Read();
         }
+
+        
     }
 }
