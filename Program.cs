@@ -79,25 +79,25 @@ namespace Knapsack_Sorter
             itemPool.Add(new Item("Holster", 113, 2));
             #endregion
 
-
+            //Some mildly useful values
             double value = 0;
-
             List<Item> tempPool = WorkerClass.ListSort(itemPool);
 
 
             for (int i = 0; i < 20; i++)
             {
-                //Add 20 items from sorted list to Knapsack
-                
+                //Add 20 items from sorted list to Knapsack    
                 Knapsack.Content.Add(tempPool[i]);
             }
 
+            //Print results
             foreach (Item item in Knapsack.Content)
             {
-                value += item.Value;
+                value += item.Value; //Calculate value
                 Knapsack.space -= item.Weight;
                 Console.WriteLine(item.Name + " : " + item.Ratio);
             }
+
             Console.WriteLine("Value:  " + value);
             Console.Read();
         }

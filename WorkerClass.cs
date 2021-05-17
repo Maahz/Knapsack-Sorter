@@ -10,11 +10,13 @@ namespace Knapsack_Sorter
     {
         public static List<Item> ListSort(List<Item> tempPool)
         {
+            //Make sure list isnt empty
             if (tempPool.Count < 1)
             {
                 Console.WriteLine("ERROR");
                 return tempPool;
             }
+            //Variables
             List<Item> result = new List<Item>();
             Item heighest = tempPool[tempPool.Count - 1];
             int itemCount = tempPool.Count;
