@@ -12,7 +12,7 @@ namespace Knapsack_Sorter
     {
         private static int Size = 20;
         internal static List<Item> Content = new List<Item>();
-        internal int space = Size;
+        internal static double space = Size;
 
         public Knapsack(Item stuff)
         {
@@ -42,7 +42,7 @@ namespace Knapsack_Sorter
     class Program
     {
         
-        static void Main(string[] args)
+        static void Main()
         {
             
             //Create itempool and add items
@@ -77,23 +77,28 @@ namespace Knapsack_Sorter
             itemPool.Add(new Item("Mittens", 42, 1));
             itemPool.Add(new Item("Beanie", 20, 1));
             itemPool.Add(new Item("Holster", 113, 2));
-            #endregion            
+            #endregion
 
-            //Function to calculate space used
 
-            //Function to sort the list
+            double value = 0;
 
-            ListSort(itemPool);
+            List<Item> tempPool = WorkerClass.ListSort(itemPool);
 
-            foreach (Item item in itemPool)
+
+            for (int i = 0; i < 20; i++)
             {
-                Console.WriteLine(item.Name +" : " + item.Ratio);
+                //Add 20 items from sorted list to Knapsack
+                
+                Knapsack.Content.Add(tempPool[i]);
             }
 
             foreach (Item item in Knapsack.Content)
             {
-                Console.WriteLine(item.Name + " " + (item.Ratio).ToString());
+                value += item.Value;
+                Knapsack.space -= item.Weight;
+                Console.WriteLine(item.Name + " : " + item.Ratio);
             }
+            Console.WriteLine("Value:  " + value);
             Console.Read();
         }
 
